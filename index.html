@@ -8,6 +8,27 @@
 <center>
 <h1>Vasudevan T V's Home Page</h1>
 <img src="programming.gif" alt="Computer man" style="width:48px;height:48px;">
+<h2>Current Date and Time</h2>
+    <div id="dateTime"></div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                hour12: true 
+            };
+            document.getElementById('dateTime').innerText = now.toLocaleString('en-US', options);
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
 <p style="color:blue;"><marquee behavior="scroll" direction="right">Welcome to my home page </marquee></p>
 <p><i>Last Updated : 19-07-2025</i></p>
 <hr>
